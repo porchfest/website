@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <title>West Philly Porchfest, June 3, 2017 — A do-it-yourself music festival featuring free shows on porches all over the neighborhood.</title>
+    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon"><!-- Place favicon.ico in the root directory -->
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+</head>
+<body class="schedule-toggle">
+	<div style="padding: 10px 0; background-color: #ccc; color: #fff; background-color: #6796c2">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					This is the website for the 2016 Porchfest. <a style="color: #fff; text-decoration: underline;" href="/">Looking for Porchfest 2017</a>?
+				</div>
+			</div>
+		</div>
+	</div>
+    <header class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <a class="header-item" href="index.html#schedule">Schedule</a>
+                <a class="header-item" href="index.html#how-to">How To Porchfest</a>
+                <a class="header-item" href="about.html">About</a>
+                <a class="header-item" target="_blank" href="https://www.facebook.com/westphillyporchfest/">Facebook</a>
+                <a class="header-item" href="donate.html">Donate</a>
+            </div>
+        </div>
+    </header>
+    <section class="section-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="hero-text">
+                        <h1 class="hero-title">West Philly Porchfest</h1>
+                        <h2 class="hidden-xs color-primary hero-date">June 6, 2016</h2>
+                        <h3 class="hidden-xs color-grey hero-time">12–6PM</h3>
+                        <h3 class="visible-xs color-grey hero-responsive-date">June 6, 2016</h3>
+                        <p class="text-h5">A do-it-yourself music festival featuring free shows on porches all over the neighborhood.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img class="hero-image hidden-xs" id="hero-image" src="img/illustration-porchfest-2.png" style="display: none"> <!-- <img class="show-xs img-responsive" src="img/illustration-porchfest-4.png"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-schedule" id="schedule">
+        <div class="container" id="schedule-top">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="display-inline-block">Schedule</h3>
+                    <nav class="toggle">
+                        <div class="header-item active" id="button-map">
+                            Map
+                        </div>
+                        <div class="header-item" id="button-list">
+                            List
+                        </div>
+                    </nav>
+                    <div class="visible-xs" id="scroll-down"><img alt="" src="img/icon-down.png"></div>
+                    <div class="map-legend hidden-xs">
+                        <div>
+                            <div class="circle" style="background-color: #209A01"></div>12PM–2PM
+                        </div>
+                        <div>
+                            <div class="circle" style="background-color: #F11910"></div>2PM–4PM
+                        </div>
+                        <div>
+                            <div class="circle" style="background-color: #3775B1"></div>4PM–6PM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="all-schedule">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="list" style="display: none">
+                            <h4 class="list-no-top-border">12PM</h4>
+                            <div class="list">
+                                <div id="list-12"></div>
+                            </div>
+                            <h4 class="list-top-border">2PM</h4>
+                            <div class="list">
+                                <div id="list-2"></div>
+                            </div>
+                            <h4 class="list-top-border">4PM</h4>
+                            <div class="list">
+                                <div id="list-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container">
+                <div id="map-overlay"></div>
+                <div id="map-header">
+                    <div class="header-item h6" id="map-header-close">
+                        <img alt="" src="img/icon-close.png"> Close Map
+                    </div>
+                </div>
+                <div id="map"></div>
+                <div id="map-sidebar" style="display: none">
+                    <div class="visible-xs" id="close-sidebar"><img alt="" src="img/icon-close.png"></div>
+                    <div id="map-sidebar-content"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-news" id="updates">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Schedule Changes</h3>
+                </div>
+                <div class="col-sm-12">
+                    <p>These performances were changed or added after our printed <a href="performance_map.pdf">Performance Map</a> was made. You can still find information for these shows on the <a href="index.html#schedule">Map &amp; Schedule</a> above.</p>
+                    <ul>
+                        <li><b>5033 Walnut St:</b> <b>Olivia Backal-Balik</b> (classical piano) added to show</li>
+                        <li><b>4814 Trinity Pl:</b> New show @ 12-2 PM w/ <b>Sacred Harp Singers</b> (shape note singing ensemble) &amp; <b>Swamp Lanterns</b> (folk harp and cello post-metal pixie-punk improvisation)</li>
+                        <li><b>5034 Spruce St:</b> New show @ 4-6 PM w/ <b>Cranes are Flying/Showbiz Carine</b> (moody, melodic, and athletic post pop rock) &amp; <b>Spruce Caboose grab bag</b> (performance from group house resident musicians)</li>
+                        <li><b>4535 Pine St:</b> New show @ 1-4 PM w/ <b>The Penitent Pilgrim of St. James</b> (a guitar act, on a porch)</li>
+                        <li><b>4703 Baltimore Ave:</b> New Show @ 4–6 PM w/ <b>Dr Ketchup</b> (balance between jazz structure and a funkified groove)</b>
+                        <li><b>4917 Locust St:</b> Show canceled</li>
+                        <li><b>5137 Pine St:</b> <b>Noplay Glancy</b> set canceled</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-volunteer" id="how-to">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>How to Porchfest</h3>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h5><b>Document Your Porchfest Experience</b></h5>
+                            <p>We encourage Porchfest particpants (hosts, musicians and audience members) to take photos, video and audio recordings. When posting to social media, use the hashtag <b>#westphillyporchfest</b>. We also request that you <a href="mailto:info@westphillyporchfest.com">email us</a> your photos, videos and audio recordings to add to our archive.</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h5><b>Participate In A Live Porchfest Remix</b></h5>
+                            <p><a href="http://www.astronauti.co/">Astro Nautico</a> label co-owner <a href="http://www.soundcloud.com/kuhnmusic">Bennett Kuhn</a> and beat artist <a href="https://soundcloud.com/lost_ships">Lost Ships</a> will crowdsource audio recordings of Porchfest provided by the show-going public (that's you!) via cellphone or other recording device. They'll then reconfigure your recordings into ambient music and hip-hop beats in live action at 4937 Catharine St. from 5-7 PM.</p><a class="btn-link" href="mailto:kuhn@astronauti.co">Send Audio</a>
+                        </div>
+                        <div class="col-sm-4">
+                            <h5><b>Post-Porchfest Square Dance</b></h5>
+                            <p>An impromptu old-time square dance will be taking place in Clark Park (on the Baltimore Ave. side) from 6:30-7:30 PM. Music and calling by Chicago's <a href="http://sstandmareva.com/">Spitzer &amp; Mareva</a> and Philly's own <a href="https://soundcloud.com/hell-among-the-yearlings">Christopher Dalnodar</a>. Stop by and swing!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-news" id="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>News</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="news-article clearfix">
+                        <h6 class="color-primary" style="margin-bottom: 4px; margin-top: 0;">PRESS</h6><a href="http://thekey.xpn.org/2016/05/21/porchfest-west-philadelphia/" style="display: block" target="_blank"><img alt="" src="img/pfest-photo-3.jpg" style="border-radius: 100%; width: 120px; float: left; margin-right: 15px; float: left; /*width: 100px;*/ margin-right: 10px; position: relative; top: 5px;">
+                        <div class="text-h5">
+                            Music for the People: Porchfest takes root in West Philadelphia
+                        </div></a>
+                        <div class="color-grey" style="margin-top: 0">
+                            XPN's The Key
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="news-article clearfix">
+                        <h6 class="color-primary" style="margin-bottom: 4px; margin-top: 0;">PRESS</h6>
+                        <div class="text-h5">
+                            <a href="http://www.westphillylocal.com/2016/05/24/west-philly-porchfest-taking-porch-culture-to-another-level/" target="_blank">West Philly Porchfest: Taking porch culture to another level</a>
+                        </div>
+                        <div class="color-grey" style="margin-top: 0">
+                            West Philly Local
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="news-article clearfix">
+                        <h6 class="color-primary" style="margin-bottom: 4px; margin-top: 0;">PRESS</h6>
+                        <div class="text-h5">
+                            <a href="http://www.phillytrib.com/metros/porchfest-bringing-infestious-music-to-west-philly/article_10f12afb-a20e-5db6-a9a3-e0b570181db7.html" target="_blank">Porchfest brings infectious music to West Philadelphia</a>
+                        </div>
+                        <div class="color-grey" style="margin-top: 0">
+                            The Philadelphia Tribune
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="news-article clearfix">
+                        <h6 class="color-primary" style="margin-bottom: 4px; margin-top: 0;">PRESS</h6>
+                        <div class="text-h5">
+                            <a href="http://thephiladelphiacitizen.org/west-philly-porchfest/" target="_blank">Do Something: Porch Hop</a>
+                        </div>
+                        <div class="color-grey" style="margin-top: 0">
+                            The Philadelphia Citizen
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="news-article clearfix">
+                        <h6 class="color-primary" style="margin-bottom: 4px; margin-top: 0;">MEETING</h6>
+                        <div class="text-h5">
+                            <a href="https://www.facebook.com/events/284286895247039/" target="_blank">Community feedback session on Tuesday June 7, 8 PM at Studio 34 (4522 Baltimore Ave.)</a>
+                        </div>
+                        <div class="color-grey" style="margin-top: 0">
+                            Facebook Event
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-volunteer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-5">
+                            <h3>Porchfest Playlist</h3>
+                            <p class="text-h5">Listen to a collection of songs from West Philly Porchfest artists!</p>
+                        </div>
+                        <div class="col-md-6 col-sm-7">
+                            <p class="text-h5" style="margin-bottom: 2.5rem; margin-top: -1rem"></p><iframe allowfullscreen="" frameborder="0" height="468" src="//playmoss.com/embed/westphillyporchfest/west-philly-porchfest-2016" width="100%"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/map2017.js"></script>
+    <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-78709474-1', 'auto');
+          ga('send', 'pageview');
+    </script>
+</body>
+</html>
