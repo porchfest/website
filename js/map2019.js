@@ -25,88 +25,87 @@ var repositionMap = function() {
 };
 
 var createTemplate = function(feature) {
-  console.log(feature);
   var bandTemplate = '';
 
   if (
-    feature.properties.performer__1_name !== '' &&
-    feature.properties.performer__1_link !== '' &&
-    feature.properties.performer__1_link !== ' '
+    feature.properties.performer_1_name !== '' &&
+    feature.properties.performer_1_link !== '' &&
+    feature.properties.performer_1_link !== ' '
   ) {
     bandTemplate +=
       '<div class="show-bandname"><a target="_blank" href="' +
-      feature.properties.performer__1_link +
+      feature.properties.performer_1_link +
       '">' +
-      feature.properties.performer__1_name +
+      feature.properties.performer_1_name +
       '</a></div>';
-  } else if (feature.properties.performer__1_name !== '') {
-    bandTemplate += '<div class="show-bandname">' + feature.properties.performer__1_name + '</div>';
+  } else if (feature.properties.performer_1_name !== '') {
+    bandTemplate += '<div class="show-bandname">' + feature.properties.performer_1_name + '</div>';
   }
   bandTemplate +=
-    '<p class="show-description-long">' + feature.properties.performer__1_long_description + '</p>';
+    '<p class="show-description-long">' + feature.properties.performer_1_long_description + '</p>';
   bandTemplate +=
     '<p class="show-description-short">' +
-    feature.properties.performer__1_short_description +
+    feature.properties.performer_1_short_description +
     '</p>';
   if (
-    feature.properties.performer__2_name !== '' &&
-    feature.properties.performer__2_link !== '' &&
-    feature.properties.performer__2_link !== ' '
+    feature.properties.performer_2_name !== '' &&
+    feature.properties.performer_2_link !== '' &&
+    feature.properties.performer_2_link !== ' '
   ) {
     bandTemplate +=
       '<div class="show-bandname"><a target="_blank" href="' +
-      feature.properties.performer__2_link +
+      feature.properties.performer_2_link +
       '">' +
-      feature.properties.performer__2_name +
+      feature.properties.performer_2_name +
       '</a></div>';
-  } else if (feature.properties.performer__2_name !== '') {
-    bandTemplate += '<div class="show-bandname">' + feature.properties.performer__2_name + '</div>';
+  } else if (feature.properties.performer_2_name !== '') {
+    bandTemplate += '<div class="show-bandname">' + feature.properties.performer_2_name + '</div>';
   }
   bandTemplate +=
-    '<p class="show-description-long">' + feature.properties.performer__2_long_description + '</p>';
+    '<p class="show-description-long">' + feature.properties.performer_2_long_description + '</p>';
   bandTemplate +=
     '<p class="show-description-short">' +
-    feature.properties.performer__2_short_description +
+    feature.properties.performer_2_short_description +
     '</p>';
   if (
-    feature.properties.performer__3_name !== '' &&
-    feature.properties.performer__3_link !== '' &&
-    feature.properties.performer__3_link !== ' '
+    feature.properties.performer_3_name !== '' &&
+    feature.properties.performer_3_link !== '' &&
+    feature.properties.performer_3_link !== ' '
   ) {
     bandTemplate +=
       '<div class="show-bandname"><a target="_blank" href="' +
-      feature.properties.performer__3_link +
+      feature.properties.performer_3_link +
       '">' +
-      feature.properties.performer__3_name +
+      feature.properties.performer_3_name +
       '</a></div>';
-  } else if (feature.properties.performer__3_name !== '') {
-    bandTemplate += '<div class="show-bandname">' + feature.properties.performer__3_name + '</div>';
+  } else if (feature.properties.performer_3_name !== '') {
+    bandTemplate += '<div class="show-bandname">' + feature.properties.performer_3_name + '</div>';
   }
   bandTemplate +=
-    '<p class="show-description-long">' + feature.properties.performer__3_long_description + '</p>';
+    '<p class="show-description-long">' + feature.properties.performer_3_long_description + '</p>';
   bandTemplate +=
     '<p class="show-description-short">' +
-    feature.properties.performer__3_short_description +
+    feature.properties.performer_3_short_description +
     '</p>';
   if (
-    feature.properties.performer__4_name !== '' &&
-    feature.properties.performer__4_link !== '' &&
-    feature.properties.performer__4_link !== ' '
+    feature.properties.performer_4_name !== '' &&
+    feature.properties.performer_4_link !== '' &&
+    feature.properties.performer_4_link !== ' '
   ) {
     bandTemplate +=
       '<div class="show-bandname"><a target="_blank" href="' +
-      feature.properties.performer__4_link +
+      feature.properties.performer_4_link +
       '">' +
-      feature.properties.performer__4_name +
+      feature.properties.performer_4_name +
       '</a></div>';
-  } else if (feature.properties.performer__4_name !== '') {
-    bandTemplate += '<div class="show-bandname">' + feature.properties.performer__4_name + '</div>';
+  } else if (feature.properties.performer_4_name !== '') {
+    bandTemplate += '<div class="show-bandname">' + feature.properties.performer_4_name + '</div>';
   }
   bandTemplate +=
-    '<p class="show-description-long">' + feature.properties.performer__4_long_description + '</p>';
+    '<p class="show-description-long">' + feature.properties.performer_4_long_description + '</p>';
   bandTemplate +=
     '<p class="show-description-short">' +
-    feature.properties.performer__4_short_description +
+    feature.properties.performer_4_short_description +
     '</p>';
   var popupTemplate =
     '<div class="show"><h1 class="show-location">' +
@@ -260,14 +259,15 @@ var unhighlightFeature = function() {
   }
 };
 
-/*
 var plotMarkers = function() {
   $.each(markers, function(key, markerObject) {
     var marker = markerObject.marker;
     marker.on({
       mouseover: function() {
         highlightFeature(markerObject);
-        $('#map-sidebar').show().removeClass("hide");
+        $('#map-sidebar')
+          .show()
+          .removeClass('hide');
         highlightedThing = markerObject;
       },
       mouseout: function() {
@@ -275,7 +275,9 @@ var plotMarkers = function() {
       },
       click: function() {
         $('body').addClass('overlay-on');
-        $('#map-sidebar').show().removeClass("hide");
+        $('#map-sidebar')
+          .show()
+          .removeClass('hide');
         unhighlightFeature();
         highlightFeature(markerObject);
         highlightedThing = markerObject;
@@ -284,7 +286,6 @@ var plotMarkers = function() {
     map.addLayer(markerObject.marker);
   });
 };
-*/
 
 map.on('zoomend', function() {
   $.each(markers, function(key, markerObject) {
@@ -311,11 +312,11 @@ $('#filter-two').click(function() {
 
 var colorize = function(feature) {
   if (feature.properties.color === 1) {
-    return '#209A01';
+    return '#008695';
   } else if (feature.properties.color === 2) {
-    return '#F11910';
+    return '#4B4B8F';
   } else if (feature.properties.color === 3) {
-    return '#3775B1';
+    return '#F97B72';
   } else {
     return 'black';
   }
@@ -342,7 +343,7 @@ $(document).ready(function() {
       opacity: 1,
       fillOpacity: 0.75,
       color: 'transparent',
-      weight: 12
+      weight: 0
     };
   };
 
@@ -355,7 +356,7 @@ $(document).ready(function() {
     markers.push(markerObject);
   };
 
-  var sql = 'SELECT * FROM porchfest';
+  var sql = 'SELECT * FROM porchfest2019';
   $.getJSON('https://porchfest.cartodb.com/api/v2/sql?format=GeoJSON&q=' + sql, function(data) {
     displayShows(data);
     myFeatureGroup = L.geoJson(data, {
