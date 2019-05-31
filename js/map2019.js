@@ -312,9 +312,9 @@ $('#filter-two').click(function() {
 
 var colorize = function(feature) {
   if (feature.properties.color === 1) {
-    return '#6c9392';
-  } else if (feature.properties.color === 2) {
     return '#d89a13';
+  } else if (feature.properties.color === 2) {
+    return '#202849';
   } else if (feature.properties.color === 3) {
     return '#ce411c';
   } else {

@@ -1921,11 +1921,14 @@ p.large {
 
 .banner {
   padding: 6px;
-  background: #6c9392;
-  color: #000000;
+  background: #cf411d;
 }
 
 .banner a {
   color: #fff;
   display: block;
+}
+
+.underline {
+  text-decoration: underline;
 }
