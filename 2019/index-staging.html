@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <title>West Philly Porchfest, June 2, 2018 — A do-it-yourself music festival featuring free shows on porches all over the neighborhood.</title>
+    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="//cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+</head>
+<body class="schedule-toggle">
+    <header class="container">
+        <div class="row">
+            <div class="col-sm-12">
+				<!-- <a class="header-item" href="/#schedule">Schedule</a> -->
+                <a class="header-item" href="about.html">About</a>
+                <a class="header-item" href="faq.html">FAQ</a>
+                <a class="header-item" href="contact.html">Contact</a>
+                <a class="header-item" href="host.html">Host a Show</a>
+                <a class="header-item" href="donate.html">Donate</a>
+            </div>
+        </div>
+    </header>
+    <section class="section-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="hero-text">
+                        <h1 class="hero-title">West Philly Porchfest</h1>
+                        <h2 class="hidden-xs color-primary hero-date">June 2, 2018</h2>
+                        <h3 class="hidden-xs color-grey hero-time">12–6PM</h3>
+                        <h3 class="visible-xs color-grey hero-responsive-date">June 2, 2018</h3>
+                        <p class="text-h5">A do-it-yourself music festival featuring free shows on porches all over the neighborhood. Anyone can host or play a show!</p>
+              <p><a class="button button-primary" href="https://goo.gl/forms/0ASrxGBaxjQphTaZ2" style="background-color: #333; margin-bottom: 6px; margin-right: 4px;">Get email updates</a> <a class="button button-primary" href="host.html" style="background-color: #008695; margin-bottom: 6px;">Host a Show</a></p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img class="hero-image hidden-xs" id="hero-image" src="img/illustration-porchfest-6.jpg" style="display: none; margin-top: -3px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+<section class="section-schedule" id="schedule">
+        <div class="container" id="schedule-top">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="display-inline-block">Schedule</h3>
+                   
+                    <nav class="toggle">
+                        <div class="header-item active" id="button-map">
+                            Map
+                        </div>
+                        <div class="header-item" id="button-list">
+                            List
+                        </div>
+                    </nav>
+                    
+<!--                     <div class="visible-xs" id="scroll-down"><img alt="" src="img/icon-down.png"></div> -->
+<!--                     <div class="download-print-map" style="position: absolute; right: 0; top: 40px;"><a target="_blank" href="/img/porchfest-2017-map.pdf">Download a print version of the map</a></div> -->
+
+                    <div class="map-legend hidden-xs">
+                        <div>
+                            <div class="circle" style="background-color: #008695"></div>12PM–2PM
+                        </div>
+                        <div>
+                            <div class="circle" style="background-color: #4B4B8F"></div>2PM–4PM
+                        </div>
+                        <div>
+                            <div class="circle" style="background-color: #F97B72"></div>4PM–6PM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="all-schedule">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="list" style="display: none">
+                            <h4 class="list-no-top-border">12PM</h4>
+                            <div class="list">
+                                <div id="list-12"></div>
+                            </div>
+                            <h4 class="list-top-border">2PM</h4>
+                            <div class="list">
+                                <div id="list-2"></div>
+                            </div>
+                            <h4 class="list-top-border">4PM</h4>
+                            <div class="list">
+                                <div id="list-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container">
+                <div id="map-overlay"></div>
+                <div id="map-header">
+                    <div class="header-item h6" id="map-header-close">
+                        <img alt="" src="img/icon-close.png"> Close Map
+                    </div>
+                </div>
+                <div id="map"></div>
+                <div id="map-sidebar" style="display: none">
+                    <div class="visible-xs" id="close-sidebar"><img alt="" src="img/icon-close.png"></div>
+                    <div id="map-sidebar-content"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--
+<section class="section-updates" id="updates">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                	<h3 class="color-white">Updates to Printed Map</h3>
+                	<h5 class="color-white">Changes to shows</h5>
+                	<ul class="color-white">
+						<li>#5 show at 4931 Florence Ave. is adding Boston Drag Racers at 12pm</li>
+						<li>#10 show at 4803 Chester Ave, Neon Grease will be replaced by Cthulu Martini at 2pm, followed by Pink Angels at 3pm.</li>
+						<li>#45 show at 4819 Cedar Ave is adding singer-songwriter Trevor Felix</li>
+						<li>#50 show with Bitters & Rye will be at 936 S. Saint Bernard St. (Saint Bernard just north of Springfield, opposite #2) from 12:30-3pm. (and NOT at 4925 Cedar from 3-6.)</li>
+						<li>#62 show at 451 S. 51st St. is adding The Joshua Shaffer Project at 3:30</li>
+					</ul>
+					<h5 class="color-white">Added Shows</h5>
+					<ul class="color-white">
+						<li>428 S. 42nd St: The Shingles (the beginnings of four songs), 2-4pm</li>
+						<li>5016 Cedar Ave: Singer-songwriter Emily Moldenhauer at 5pm</li>
+						<li>5020 Larchwood Ave: Lost Highway String Band and The Bluegrass Company, 4-6pm </li>
+						<li>516 S. 44th St: Big Big Bug (songs that are happy and sad), 4-4:20pm</li>
+					</ul>
+					<h5 class="color-white">Cancelled Show</h5>
+					<ul class="color-white">
+						<li>#3 show with White Cheddar Boys at 5009 Florence Ave is cancelled.</li>
+					</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <section class="section-news" id="news" style="margin-top: 30px">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Press</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="news-article clearfix">
+                        <!-- <h6 class="" style="margin-bottom: 4px; margin-top: 0;">PRESS</h6> -->
+                        <a href="http://thekey.xpn.org/2018/03/09/west-philly-porchfest-2018/" style="display: block" target="_blank"><img alt="" src="img/pfest-photo-3.jpg" style="border-radius: 100%; width: 120px; float: left; margin-right: 15px; float: left; /*width: 100px;*/ margin-right: 10px; position: relative; top: 5px;">
+                        <div class="text-h5">
+                            West Philly Porchfest returns for a third year this June
+                        </div></a>
+                        <div class="color-grey" style="margin-top: 0">
+                            XPN's The Key
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="news-article clearfix">
+<!--                         <h6 class="" style="margin-bottom: 4px; margin-top: 0;">PRESS</h6> -->
+                        <div class="text-h5">
+                            <a href="http://www.westphillylocal.com/2016/05/24/west-philly-porchfest-taking-porch-culture-to-another-level/" target="_blank">West Philly Porchfest: Taking porch culture to another level</a>
+                        </div>
+                        <div class="color-grey" style="margin-top: 0">
+                            West Philly Local
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-md-6 col-sm-6">
+                    <div class="news-article clearfix">
+<!--                         <h6 class="" style="margin-bottom: 4px; margin-top: 0;">PRESS</h6> -->
+                        <div class="text-h5">
+                            <a href="http://www.newsworks.org/index.php/homepage-feature/item/104485-west-philly-porchfest-features-free-concerts-from-43rd-to-54th-streets?linktype=hp_impact" target="_blank">Porchfest returns with free concerts throughout West Philly</a>
+                        </div>
+                        <div class="color-grey" style="margin-top: 0">
+                            NewsWorks
+                        </div>
+                    </div>
+                </div>
+            	<div class="col-md-6 col-sm-6">
+                    <div class="news-article clearfix">
+<!--                         <h6 class="" style="margin-bottom: 4px; margin-top: 0;">PRESS</h6> -->
+                        <div class="text-h5">
+                            <a href="http://www.phillyvoice.com/west-philly-porchfest-2017/" target="_blank">Jam-packed West Philly Porchfest prepares for second year</a>
+                        </div>
+                        <div class="color-grey" style="margin-top: 0">
+                            PhillyVoice
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--
+<section class="section-volunteer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-5">
+                            <h3 class="color-white">Porchfest Playlist</h3>
+                            <p class="text-h5 color-white">Listen to a collection of songs from last year's West Philly Porchfest artists. See the full <a style="color: #005397" href="/2016/#schedule" target="_blank">2016 schedule</a>.</p>
+                        </div>
+                        <div class="col-md-6 col-sm-7">
+                            <p class="text-h5" style="margin-bottom: 2.5rem; margin-top: -1rem"></p><iframe allowfullscreen="" frameborder="0" height="468" src="//playmoss.com/embed/westphillyporchfest/west-philly-porchfest-2016" width="100%"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <section class="section-photography section-news hidden-xs" style="border-top-color: transparent;
+    padding-top: 0rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <img src="pf-1600.jpg" style="max-width: 100%;" alt="Collage of photos from Porchfest 2017; Man playing electric guitar, several women playing drums; a band playing instruments on a porch; a band playing on a porch and an audience sitting in chairs on the sidewalk">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/map2018-staging.js"></script>
+    <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-78709474-1', 'auto');
+          ga('send', 'pageview');
+    </script>
+</body>
+</html>
